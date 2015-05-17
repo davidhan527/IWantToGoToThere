@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Start date:</strong>
+  <%= @itinerary.start_date %>
+</p>
+
+<p>
+  <strong>End date:</strong>
+  <%= @itinerary.end_date %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @itinerary.user %>
+</p>
+
+<%= link_to 'Edit', edit_itinerary_path(@itinerary) %> |
+<%= link_to 'Back', itineraries_path %>
