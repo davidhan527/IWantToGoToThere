@@ -1,0 +1,10 @@
+language: ruby
+rvm:
+  - 2.1.6
+bundler_args: "--without development production"
+cache: bundler
+script:
+- RAILS_ENV=test bundle exec rake --trace db:migrate
+- bundle exec rspec
+before_script:
+  - psql -c 'create database itinerary_test;' -U postgres
